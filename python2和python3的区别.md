@@ -1,0 +1,38 @@
+### Python 2 和 Python 3 的版本之间差别
+
+- **性能**
+  - python3起始比python2效率低，但是python3版本有极大的优化控件，效率会慢慢追赶
+- **编码**
+  - python3原码文件默认使用utf-8编码，是的变量名更为广阔
+
+- **语法**
+  - 去除了<>，改用 !=
+  - 加入了as和with关键字，还有True,False,None
+  - 整型触发返回浮点数，整除请使用//
+  - 加入nonlocal语句
+  - 去除print语句，加入了print()函数
+  - 去除了raw_input，加入input()函数
+  - 新的super()，可以不再给super()传参数
+  - 改变了顺序操作符的行为，例如x<y，当x和y的类型不匹配是抛出TypeRrror而不是返回随机的bool值
+    - Python2中各类型**int, float, complex, set, tuple, dict, str, list** 从小到大的顺利
+  - 新式的8进制自变量，例：0o654
+- **字符串和字节串**
+  - python2：字符串以8-bit字符串存储
+  - python3：字符串以16-bit Unicode字符串存储，现在字符串只有str一种类型
+- **数据类型**
+  - python3去除了long类型，现在只有一种整型----int，但它的行为就像2版本的long
+  - 新增了bytes类型，对应于2版本的八位串
+    - str对象可以和bytes对象和通过encode()(str-->bytes)和decode()(bytes-->str)相互转化
+- **面向对象**
+  - 引入了抽象基类
+- **异常**
+  - 所有异常都从BaseException继承，并删除了StandardError
+  - python2  try...exception Exception, e: ...
+  - python3 try...exception Exception as e: ...
+- **其他**
+  - xrange()改名为range()，要想使用range()获得一个list,必须显示调用
+  - file类被废弃
+    - python2  
+      - 打开文件 file(path), open(path)
+    - python3
+      - opne(path)
